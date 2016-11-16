@@ -1,16 +1,14 @@
-# ruby-getting-started
+# trump-tax-giving-pledge
 
-A barebones Rails app, which can easily be deployed to Heroku.
-
-This application support the [Getting Started with Ruby on Heroku](https://devcenter.heroku.com/articles/getting-started-with-ruby) article - check it out.
+TK
 
 ## Running Locally
 
 Make sure you have Ruby installed.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
 
 ```sh
-$ git clone git@github.com:heroku/ruby-getting-started.git
-$ cd ruby-getting-started
+$ git clone git@github.com:laferrera/trump-tax-giving-pledge.git
+$ cd trump-tax-giving-pledge
 $ bundle install
 $ bundle exec rake db:create db:migrate
 $ heroku local
@@ -20,10 +18,11 @@ Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Deploying to Heroku
 
+add trump-tax-giving-pledge
+
 ```sh
-$ heroku create
+$ git remote add heroku https://git.heroku.com/trump-tax-giving-pledge.git
 $ git push heroku master
-$ heroku run rake db:migrate
 $ heroku open
 ```
 
@@ -62,7 +61,5 @@ You can also use Docker to release to Heroku:
 
 ## Documentation
 
-For more information about using Ruby on Heroku, see these Dev Center articles:
-
-- [Ruby on Heroku](https://devcenter.heroku.com/categories/ruby)
+Coming Soon.
 

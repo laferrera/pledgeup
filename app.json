@@ -1,8 +1,8 @@
 {
-  "name": "Start on Heroku: Ruby",
-  "description": "A barebones Rails app, which can easily be deployed to Heroku",
+  "name": "Ruby",
+  "description": "",
   "image": "heroku/ruby",
-  "repository": "https://github.com/heroku/ruby-getting-started",
+  "repository": "https://github.com/laferrera/trump-tax-giving-pledge",
   "keywords": ["ruby", "rails" ],
   "addons": [ "heroku-postgresql" ]
 }
