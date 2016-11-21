@@ -1,10 +1,37 @@
-$brand-primary: #532F8C;
+$brand-primary: #2d3146;
+$brand-secondary:#ffb000;
 $brand-language: #B01302;
 
+input,
+select{
+  color:#000;
+}
+
+input{
+  background:none;
+  border:none;
+  border-bottom:3px dashed #fff;
+  outline:none;
+}
+
+.page{
+   height:100vh;
+    background:$brand-primary;
+}
+
+.bg-white{
+  background:#fff;
+}
+
+.text-white{
+  color:#fff;
+}
+
 .jumbotron {
-  background: $brand-primary;
+  background: asset-url('hero-bg-fpo.jpg');
   color: white;
-  padding-bottom: 80px;
+  padding:0;
+  margin:0;
 
   .btn-primary {
     background: lighten($brand-primary, 20%);
@@ -15,7 +42,7 @@ $brand-language: #B01302;
   }
 
   p {
-    color: lighten($brand-primary, 50%);
+    color: #fff;
     max-width: 75%;
     margin: 1em auto 2em;
   }
@@ -24,19 +51,38 @@ $brand-language: #B01302;
     margin-top: -20px;
   }
 
-  .lang-logo {
-    display: block;
-    background: $brand-language;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    border: 2px solid white;
-    img {
-      max-width: 100%;
-    }
-  }
-
 }
 
+.btn-lg{
+  height:75px;
+  border-radius: 38px;
+  
+}
+
+.nav-left{
+  position:fixed;
+  left:10px;
+}
+
+.nav-right{
+  position:fixed;
+  right:10px;
+}
+
+footer{
+  height:300px;
+  background:#2d3146;
+}
+
+#pledge-container{
+  background: $brand-secondary;
+  height:400px;
+  width:500px;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:10px;
+}
+
+.causes{
+  width:100px;
+}

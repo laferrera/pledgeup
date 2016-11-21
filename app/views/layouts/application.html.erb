@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ruby Getting Started on Heroku</title>
+  <title>Pledge Up</title>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,36 +9,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top navbar-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li class="active">
-        <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>
-      </li>
-      <li>
-        <a href="https://google.com"><span class="glyphicon glyphicon-user"></span> Google</a>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span> DropDown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://github.com">Github</a></li>
-            <li><a href="https://google.com">Google</a></li>
-            <li><a href="https://twitter.com">Twitter</a></li>
-            <li class="divider"></li>
-            <li><a href="https://facebook.com">Facebook</a></li>
-            <li><a href="https://instagram.com">Instagram</a></li>
-          </ul>
-      </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="navbar-right">
-        <a href="https://github.com"><span class="glyphicon glyphicon-book"></span> Github</a>
-      </li>
+<nav class="">
+  <div class='nav-left'>
+    <div class="nav-logo">
+    </div>
+    <ul>
+      <li><a href="">About</a></li>
+      <li><a href="">Resources</a></li>      
+      <li><a href="">Faq</a></li>      
     </ul>
   </div>
+  <div class='nav-right'>
+    <div class="pledge-count">
+      199999
+    </div>
+  </div>
+
 </nav>
 
 <%= yield %>
 
+<footer class='text-center text-white'>
+  <h1>footer links!</h1>
+</footer>
 </body>
 </html>
