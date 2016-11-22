@@ -33,6 +33,7 @@ gem 'spring',        group: :development
 gem 'puma'
 gem 'devise'
 gem "cancancan"
+gem 'rails_admin', '~> 1.0'
 gem 'byebug', group: :development
 
 # things to consider

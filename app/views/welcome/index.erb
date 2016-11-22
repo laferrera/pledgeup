@@ -1,3 +1,29 @@
+<nav class="">
+  <div class='nav-left'>
+    <div class="nav-logo-container">
+      <div class="nav-logo">
+      </div>      
+      <div class="logo-name">
+        Pledge Up
+      </div>
+    </div>
+    <ul class="list-unstyled">
+      <li><a href="">About</a></li>
+      <li><a href="">Resources</a></li>      
+      <li><a href="">Faq</a></li>      
+    </ul>
+  </div>
+  <div class='nav-right'>
+    <div class="pledge-count h1">
+      199999
+    </div>
+    <div class="pledge-count-description">
+      people pledged
+    </div>
+  </div>
+
+</nav>
+
 <div class="jumbotron text-center page">
   <div class="container">
     <h1>Empowering headline goes to second line</h1>
@@ -9,17 +35,17 @@ Join #PledgeUp. Consider this our insurance policy for America’s communities l
     <a type="button" class="btn btn-lg btn-primary" href="">What's your tax impact</a>
   </div>
 </div>
-<div class="page text-center text-white">
+<div class="page text-center bg-white">
   <div class="container">
     <h1>#PledgeUp for America</h1>
     <h3>Help communities in America likely to be impacted over the next 4 years.</h3>
     <h3>How does the pledge work?</h3>
     <div id="pledge-form">
       <div id="pledge-container">
-        <div class="pledge-line">
-          I, <input type="text"></input>
+        <div class="pledge-line h2">
+          I, <input type="text" class="h3" id="name" ></input>
         </div>
-        <div class="pledge-line">
+        <div class="pledge-line h1">
           Pledge Up For
         </div>
         <div class="pledge-line">
@@ -32,13 +58,13 @@ Join #PledgeUp. Consider this our insurance policy for America’s communities l
         </div>
       </div>
       <h3>Sign your pledge with your email (we promise not to spam you)</h3>
-      <input type="email"></div>
-      <div class="btn btn-lg btn-default" href="">Submit My Pledge</div>      
+      <input type="email" class="h3" id="email"></div>
+      <div class="btn btn-lg btn-secondary" href="">Submit My Pledge</div>      
     <p>
   </div>
 </div>
 
-<div class="page bg-white">
+<div class="page text-white">
   <div class="container">
     <h1>ABOUT us</h1>
     <h3>We are a committed group of Americans</h3>
@@ -65,6 +91,6 @@ Join #PledgeUp. Consider this our insurance policy for America’s communities l
 
 <script>
 $( document ).ready(function() {
-$('#causes').chosen({width:'100%'});
+$('#causes').chosen({width:'90%',max_selected_options: 3});
 });
 </script>

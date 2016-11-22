@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/studio', as: 'rails_admin'
+  devise_for :users
   resources :widgets
 
   # The priority is based upon order of creation: first created -> highest priority.
