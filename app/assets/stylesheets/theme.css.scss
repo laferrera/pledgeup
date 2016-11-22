@@ -2,13 +2,19 @@ $brand-primary: #13e5bd;
 $brand-secondary:#991dea;
 $brand-language: #B01302;
 
+body{
+  background: $brand-secondary;
+}
+
 input,
 select{
   color:#fff;
 }
 
-input{
+input,
+input:-webkit-autofill{
   background:none;
+  background-color:none !important;
   border:none;
   border-bottom:3px dashed #fff;
   outline:none;
