@@ -40,26 +40,27 @@ Join #PledgeUp. Consider this our insurance policy for America’s communities l
     <h1>#PledgeUp for America</h1>
     <h3>Help communities in America likely to be impacted over the next 4 years.</h3>
     <h3>How does the pledge work?</h3>
-    <div id="pledge-form">
+    
+    <form id="pledge-form">
       <div id="pledge-container">
         <div class="pledge-line h2">
-          I, <input type="text" class="h3" id="name" ></input>
+          I, <input type="text" class="h3" id="name" name="name"/>
         </div>
         <div class="pledge-line h1">
           Pledge Up For
         </div>
         <div class="pledge-line">
-          <select multiple id="causes" name="causes">
+          <select multiple id="causes" name="cause1">
           <% Cause.all.each do |cause| %>
             <option value="<%= cause.id %>"><%= cause.name %></option>          
           <% end %>
           </select>                                          
         </div>
-      </div>
+      </div>        
       <h3>Sign your pledge with your email (we promise not to spam you)</h3>
-      <input type="email" class="h3" id="email"></div>
-      <div class="btn btn-lg btn-secondary" href="">Submit My Pledge</div>      
-    <p>
+      <input type="email" class="h3" id="email" name="email"/>
+      <div class="btn btn-lg btn-secondary" href="" id="submitPledge" onclick="submitPledge();">Submit My Pledge</div>
+    </form>
   </div>
 </div>
 
@@ -92,4 +93,26 @@ Join #PledgeUp. Consider this our insurance policy for America’s communities l
 $( document ).ready(function() {
 $('#causes').chosen({width:'90%',max_selected_options: 3});
 });
+
+  var submitPledge = function(e){
+  $('#submitPledge').html('<img src="https://cdn.shopify.com/s/files/1/0265/4001/t/3/assets/small-ajax-loader.gif?17070009356307823908" />')    
+  $.ajax({
+    url: '/pledges',
+    type: "POST",
+    data: $( '#pledge-form' ).serialize(),
+  })
+    .fail(function(){
+    $('#submitPledge').html('error!')    
+          return false;
+  }).success(function(e){
+      $('#submitPledge').html('thanks!')    
+      return false;    
+    }
+  )
+  return false;    
+
+}
+
+
 </script>
+
