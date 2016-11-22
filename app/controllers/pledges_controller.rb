@@ -27,8 +27,7 @@ class PledgesController < ApplicationController
     @pledge = Pledge.new(hash)
     respond_to do |format|
       if @pledge.save
-        format.html { redirect_to @pledge, notice: 'Pledge was successfully created.' }
-        format.json { render :show, status: :created, location: @pledge }
+        format.json { render json: @pledge, status: :created}
       else
         format.html { render :new }
         format.json { render json: @pledge.errors, status: :unprocessable_entity }

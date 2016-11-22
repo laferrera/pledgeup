@@ -59,7 +59,7 @@ Join #PledgeUp. Consider this our insurance policy for America’s communities l
       </div>        
       <h3>Sign your pledge with your email (we promise not to spam you)</h3>
       <input type="email" class="h3" id="email" name="email"/>
-      <div class="btn btn-lg btn-secondary" href="" id="submitPledge" onclick="submitPledge();">Submit My Pledge</div>
+      <div class="btn btn-lg btn-secondary" href="" id="submitPledge" >Submit My Pledge</div>
     </form>
   </div>
 </div>
@@ -94,7 +94,7 @@ $( document ).ready(function() {
 $('#causes').chosen({width:'90%',max_selected_options: 3});
 });
 
-  var submitPledge = function(e){
+function submitPledge(e){
   $('#submitPledge').html('<img src="https://cdn.shopify.com/s/files/1/0265/4001/t/3/assets/small-ajax-loader.gif?17070009356307823908" />')    
   $.ajax({
     url: '/pledges',
@@ -102,16 +102,29 @@ $('#causes').chosen({width:'90%',max_selected_options: 3});
     data: $( '#pledge-form' ).serialize(),
   })
     .fail(function(){
-    $('#submitPledge').html('error!')    
+      $('#submitPledge').html('error!')    
           return false;
   }).success(function(e){
       $('#submitPledge').html('thanks!')    
-      return false;    
     }
   )
-  return false;    
-
 }
+
+$('#submitPledge').on('click', function(e){
+   e.preventDefault();
+   $.ajax({
+     url: '/pledges',
+     type: "POST",
+     data: $( '#pledge-form' ).serialize(),
+   })
+     .fail(function(){
+       $('#submitPledge').html('error!')    
+   }).success(function(){
+       $('#submitPledge').html('thanks!')    
+     }
+   )
+  return false;
+});
 
 
 </script>
