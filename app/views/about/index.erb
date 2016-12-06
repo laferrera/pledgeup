@@ -26,49 +26,9 @@
 
 </nav>
 
-<div class="jumbotron text-center page">
-  <div class="container">
-    <h1>Empowering headline goes to second line</h1>
-    <p>Based on policy proposals from his campaign, President-Elect Trump and the Republican Congress intend to cut taxes while his other stated policy preferences indicate that many of our communities are likely to face increased social, legal and economic insecurity, putting our safety and resilience at risk.
-    </p>
-    <p>
-Join #PledgeUp. Consider this our insurance policy for America’s communities likely to be hardest-hit by President-Elect Trump’s policy agenda over the next four years.</p>
-    <a type="button" class="btn btn-lg btn-default" href="">Pledge Up</a>
-    <a type="button" class="btn btn-lg btn-primary" href="">Calculate your tax difference</a>
-  </div>
-</div>
-<div class="page text-center bg-white">
-  <div class="container">
-    <h1>#PledgeUp for America</h1>
-    <h3>Help communities in America likely to be impacted over the next 4 years.</h3>
-    <h3>How does the pledge work?</h3>
-    
-    <form id="pledge-form">
-      <div id="pledge-container">
-        <div class="pledge-line h2">
-          I, <input type="text" class="h3" id="name" name="name"/>
-        </div>
-        <div class="pledge-line h1">
-          Pledge Up For
-        </div>
-        <div class="pledge-line">
-          <select multiple id="causes" name="cause1">
-          <% Cause.all.each do |cause| %>
-            <option value="<%= cause.id %>"><%= cause.name %></option>          
-          <% end %>
-          </select>                                          
-        </div>
-      </div>        
-      <h3>Sign your pledge with your email (we promise not to spam you)</h3>
-      <input type="email" class="h3" id="email" name="email"/>
-      <div class="btn btn-lg btn-secondary" href="" id="submitPledge" >Submit My Pledge</div>
-    </form>
-  </div>
-</div>
-
 <div class="page text-white">
   <div class="container">
-    <h1>ABOUT us</h1>
+    <h1>About Us</h1>
     <h3>We are a committed group of Americans</h3>
     <p>
     who believe the American Dream is for everyone who lives in our country. We all benefit each day a family in America gets closer to their Dream.

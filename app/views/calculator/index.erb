@@ -1,0 +1,75 @@
+<nav class="">
+  <div class='nav-left'>
+    <div class="nav-logo-container">
+      <div class="nav-logo">
+      </div>      
+      <div class="logo-name">
+        Pledge Up
+      </div>
+    </div>
+    <ul class="list-unstyled">
+      <li><a href="">Pledge</a></li>
+      <li><a href="">Calculate</a></li>      
+      <li><a href="">Causes</a></li>      
+      <li><a href="">About</a></li>            
+    </ul>
+  </div>
+  <div class='nav-right'>
+    <div class="pledge-count h1">
+      199999
+    </div>
+    <div class="pledge-count-description">
+      people pledged
+    </div>
+    <!-- <a type="button" class="btn btn-lg btn-default" href="">Pledge Up</a> -->
+  </div>
+
+</nav>
+
+<div class="page text-white">
+  <div class="container">
+    <h1>Calculator</h1>
+
+  </div>
+</div>
+
+<script>
+$( document ).ready(function() {
+$('#causes').chosen({width:'90%',max_selected_options: 3});
+});
+
+function submitPledge(e){
+  $('#submitPledge').html('<img src="https://cdn.shopify.com/s/files/1/0265/4001/t/3/assets/small-ajax-loader.gif?17070009356307823908" />')    
+  $.ajax({
+    url: '/pledges',
+    type: "POST",
+    data: $( '#pledge-form' ).serialize(),
+  })
+    .fail(function(){
+      $('#submitPledge').html('error!')    
+          return false;
+  }).success(function(e){
+      $('#submitPledge').html('thanks!')    
+    }
+  )
+}
+
+$('#submitPledge').on('click', function(e){
+   e.preventDefault();
+   $.ajax({
+     url: '/pledges',
+     type: "POST",
+     data: $( '#pledge-form' ).serialize(),
+   })
+     .fail(function(){
+       $('#submitPledge').html('error!')    
+   }).success(function(){
+       $('#submitPledge').html('thanks!')    
+     }
+   )
+  return false;
+});
+
+
+</script>
+
